@@ -1,0 +1,28 @@
+package com.courseselection.entity;
+
+import java.time.LocalDateTime;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
+@TableName("selection")
+public class Selection {
+    @TableId(type = IdType.AUTO)
+    private Long id;
+    private Long studentId;
+    private Long courseId;
+    private LocalDateTime selectTime;
+    private String status;
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public Long getStudentId() { return studentId; }
+    public void setStudentId(Long studentId) { this.studentId = studentId; }
+    public Long getCourseId() { return courseId; }
+    public void setCourseId(Long courseId) { this.courseId = courseId; }
+    public LocalDateTime getSelectTime() { return selectTime; }
+    public void setSelectTime(LocalDateTime selectTime) { this.selectTime = selectTime; }
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
+}

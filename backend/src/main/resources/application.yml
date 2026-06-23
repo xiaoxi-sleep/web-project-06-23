@@ -1,0 +1,24 @@
+﻿server:
+  port: 8080
+  tomcat:
+    protocol: org.apache.coyote.http11.Http11Nio2Protocol
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/course_selection?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+jwt:
+  secret: com.courseselection.jwt.secret.key.2026.course.selection.system
+  expiration: 86400000
+
+logging:
+  level:
+    com.courseselection: debug
